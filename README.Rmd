@@ -1,6 +1,12 @@
-# STAT 450 Seminar Material
-Dustin Johnson  
-January 7, 2017  
+---
+title: "STAT 450 Seminar Material"
+author: "Dustin Johnson"
+date: "January 7, 2017"
+output: 
+  html_document:
+    keep_md: true
+    theme: journal
+---
 
 Hello STAT 450 folk! This repo will contain the material and tasks covered in the seminar. Do your best to stay up-to-date and visit connect to access the seminar slides.
 
@@ -34,8 +40,7 @@ For our first seminar, the following was covered (please refer to slides on conn
 
 We will walk through the process with an applied example using the Gapminder data set. Firstly, we are required to import the data. Conveniently, the data can be retrieved from [CRAN](https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-is-CRAN_003f).
 
-
-```r
+```{r}
 # uncomment if you haven't installed gapminder yet.
 #install.packages('gapminder')
 
@@ -49,32 +54,19 @@ We can examine the structure of the data using the built-in R functions below. I
 3. What are the variable names and data types? (int, num, chr, etc)
 4. Can you explain what the data is that you are attempting to investigate?
 
-
-```r
+```{r,eval=FALSE}
 head(gapminder); tail(gapminder)
 nrow(gapminder); ncol(gapminder)
 dim(gapminder)
 ```
 
-
-```r
+```{r}
 str(gapminder)
-```
-
-```
-## Classes 'tbl_df', 'tbl' and 'data.frame':	1704 obs. of  6 variables:
-##  $ country  : Factor w/ 142 levels "Afghanistan",..: 1 1 1 1 1 1 1 1 1 1 ...
-##  $ continent: Factor w/ 5 levels "Africa","Americas",..: 3 3 3 3 3 3 3 3 3 3 ...
-##  $ year     : int  1952 1957 1962 1967 1972 1977 1982 1987 1992 1997 ...
-##  $ lifeExp  : num  28.8 30.3 32 34 36.1 ...
-##  $ pop      : int  8425333 9240934 10267083 11537966 13079460 14880372 12881816 13867957 16317921 22227415 ...
-##  $ gdpPercap: num  779 821 853 836 740 ...
 ```
 
 Once we know something about the data, we can begin to examine it more closely. Let's plot lifeExp from 1960 to 2007 for the country Rwanda. I'll leave it up to you to interpret.
 
-
-```r
+```{r}
 # rename object
 gDat <- gapminder
 
@@ -92,14 +84,12 @@ plot(lifeExp ~ year,
 		 type = "l", 
 		 main = "Life Expectancy of Rwanda \n ~ 1962 to 2007 ~",
 		 col = "blue")
-```
 
-![](README_files/figure-html/unnamed-chunk-4-1.png) 
+```
 
 Let's say we are interested in the rate of change of gdpPerCap for Rwanda We can apply functions to vectors and transform the data to the desired format and combine the results to the original data.frame using `cbind()` or `data.frame()`:
 
-
-```r
+```{r}
 # create a function to compute the rate of change
 deltaCompute <- function(x)
 {
@@ -125,7 +115,6 @@ plot(Delta ~ year,
 		 main = "Annual Change of GDP per Capita for Rwanda",
 		 type = "l",
 		 col = "blue")
-```
 
-![](README_files/figure-html/unnamed-chunk-5-1.png) 
+```
 
