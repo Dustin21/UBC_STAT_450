@@ -6,6 +6,7 @@ output:
   html_document:
     keep_md: true
     theme: journal
+    highlight: tango
 ---
 
 Hello STAT 450 folk! This repo will contain the material and tasks covered in the seminar. Do your best to stay up-to-date and visit connect to access the seminar slides.
