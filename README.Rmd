@@ -35,7 +35,7 @@ Hello STAT 450 folk! This repo will contain the material and tasks covered in th
 ##### Complete by: January 19, 2017 <a name="jan19"></a>
 1. Create STAT_450 repository on your personal Github account
 2. Get familiar with the R and Git routine by following the tutorial [here](https://www.r-bloggers.com/rstudio-and-github/).
-3. In the STAT_450 repo, initiate a README.md that includes the following:
+3. First, get familiar with [Markdown](http://www.markdowntutorial.com/). Then, in the STAT_450 repo, initiate a README.md that includes the following:
 	* Description about yourself
 	* Photo of yourself or something that interests you
 	* Description of what you aim to take away from STAT 450
