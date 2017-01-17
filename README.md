@@ -4,23 +4,45 @@ January 7, 2017
 
 Hello STAT 450 folk! This repo will contain the material and tasks covered in the seminar. Do your best to stay up-to-date and visit connect to access the seminar slides.
 
-### Tasks and Challenges
+### Table of Contents
+1. [Tasks and Challenges](#tasks)
+	* [Task 1](#jan12)
+	* [Task 2](#jan19)
+2. [Seminar Material](#material)
+	* [Week 1](#jan5)
+
 
 ---
 
-##### Complete by: January 12, 2016
+
+### Tasks and Challenges <a name="tasks"></a>
+
+---
+
+##### Complete by: January 12, 2017 <a name="jan12"></a>
 
 * Using the Gapminder dataset, please complete the following for the next seminar:
 	* determine the rate of change of lifeExp, pop, or gdpPerCap for two countries
 	* plot these rates of change again each other and comment on the results
 	* comment on the statistical limitations of your results and possible remedies
 	
+##### Complete by: January 19, 2017 <a name="jan19"></a>
+1. Create STAT_450 repository on your personal Github account
+2. Get familiar with the R and Git routine by following the tutorial [here](https://www.r-bloggers.com/rstudio-and-github/).
+3. In the STAT_450 repo, initiate a README.md that includes the following:
+	* Description about yourself
+	* Photo of yourself or something that interests you
+	* Description of what you aim to take away from STAT 450
+4. Begin populating your STAT_450 repo with material and tasks you have completed so far. For instance, you should have a folder called Week1_Seminar, where you will place the Gapminder task completed the previous week. In this repo, initialize another README.md that interprets your results of the task. Follow the format I used below (code, plot, description).
+5. Stay organized!
 
-### Seminar Material
+	
+
+### Seminar Material <a name="material"></a>
 
 ---
 
-#### January 5, 2016
+#### January 5, 2016 <a name="jan5"></a>
 
 For our first seminar, the following was covered (please refer to slides on connect):
 
