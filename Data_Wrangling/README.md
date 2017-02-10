@@ -1,0 +1,58 @@
+# Data Wrangling
+Dustin Johnson  
+2/10/2017  
+
+
+We begin to explore `data.frames` using simple functions that give us a brief understanding of what the data entails:
+
+* `dim()`, `nrow()`, `ncol()`
+* `str()`
+* `is.data.frame()`, `is.matrix()`, `is.vector()`, etc.
+* `summary()`
+
+### dplyr <a name="dplyr"></a>
+
+We then delved into the powerful dplyr package. Remember, `data.frames` are special forms of data objects in R that enable us to combine numerical, factor, string, and other types of data together. A simple matrix cannot combine different types of data, as we saw in class. We covered useful dplyr "verbs" that perform routine operations on your data, including:
+
+* `select()` - select the variables (columns) of the data you are interested in.
+* `filter()` - filter the rows of the data.frame utilising your logical operators `>`,`<`,`>=`,`<=`, and `==` .
+* `group_by()` - group the data according to some category, for instance, group all data by continent.
+* `mutate()` - mutate or transform one variable into another using some function. For example, create a new variable (column) that is a combination of two other variables (population and GDP).
+* `summarise()`  - Summarise multiple values to a single value. For example, the mean GDP or total GDP of each continent, where the continent group was created using the function `group_by()`.
+
+We also learned about the use of the piping commands `%>%`, using `command⌘+shift+m,` making data wrangling intuitive and easy. Here's a n example:
+
+<br>
+
+#### Challenge: Can you find the world growth of GDP per Capita in 1997? <a name="challenge_dplyr"></a>
+
+I would just like to **select** the year, continent and gdpPercap variables from the gapminder data object, **mutate** gdpPercap into a new variable (column) called change (rate of change of gdpPercap), **filter** all years greater (but not equal to) 1952 (why?), **group_by year**, and **summarize** the data by the mean rate of change of gdpPercap per the grouped category, year.
+
+
+
+
+```r
+gdp.delta <- gapminder %>%
+    select(year, continent, gdpPercap) %>%
+    mutate(change = 100*((gdpPercap - lag(gdpPercap)))/gdpPercap) %>%
+    filter(year > 1952) %>%
+    group_by(year) %>%
+    summarise(gdp_delta = mean(change))
+```
+
+The result is an object `gdp.delta` with the mean rate of change of GDP per Capita for each year (5-year lag), as below:
+
+
+ year    gdp_delta  
+------  ------------
+ 1957    12.6140175 
+ 1962    11.0293491 
+ 1967    12.8726900 
+ 1972    13.8092669 
+ 1977    8.2764706  
+ 1982    3.0273164  
+ 1987    0.3031941  
+ 1992    -3.2216599 
+ 1997    6.0489270  
+ 2002    5.8104172  
+ 2007    13.8184345 
