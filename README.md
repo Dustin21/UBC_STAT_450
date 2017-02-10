@@ -8,8 +8,11 @@ Hello STAT 450 folk! This repo will contain the material and tasks covered in th
 1. [Tasks and Challenges](#tasks)
 	* [Task 1](#jan12)
 	* [Task 2](#jan19)
-2. [Seminar Material](#material)
-	* [Week 1](#jan5)
+2. Seminar Material
+	* [Week 1](https://github.com/Dustin21/UBC_STAT_450/tree/master/Introduction)
+	* [Week 2](https://github.com/Dustin21/UBC_STAT_450/tree/master/Data_Wrangling)
+	* [Week 3](https://github.com/Dustin21/UBC_STAT_450/tree/master/Visualization)
+	* [Week 4](https://github.com/Dustin21/UBC_STAT_450/tree/master/Data_Exploration)
 
 
 ---
